@@ -20,7 +20,6 @@ const Navigation = () => {
     const {currentUser} = useContext(UserContext);
     const { isCartOpen } = useContext(CartContext);
 
-
     return (
       <Fragment>
         <NavigationContainer>
@@ -33,7 +32,7 @@ const Navigation = () => {
           </NavLink>
           {
             currentUser ? (
-              <NavLink as='span' className='nav-link' onClick={signOutUser}>
+              <NavLink as='span' onClick={signOutUser}>
                 SIGN OUT
               </NavLink>
             ) : (
